@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta</title>
+</head>
+<body>
+    <main>
+        <h1>Crie uma Nova Conta</h1>
+        <form method="post" action="/conta">
+            <fieldset>
+                <h2>Conta</h2>
+                <ul>
+                    <li>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome">
+                    </li>
+                    <li>
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="text" id="sobrenome" name="sobrenome">
+                    </li>
+                    <li>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </li>
+                    <li>
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" required>
+                    </li>
+                    <li>
+                        <label for="repetir-senha">Repita a Senha:</label>
+                        <input type="password" id="repetir-senha" name="repetir-senha" required>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <h2>Endereço</h2>
+                <ul>
+                    <li>
+                        <label for="logradouro">Logradouro:</label>
+                        <input type="text" id="logradouro" name="logradouro">
+                    </li>
+                    <li>
+                        <label for="complemento">Complemento</label>
+                        <input type="text" id="complemento" name="complemento">
+                    </li>
+                    <li>
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade">
+                    </li>
+                    <li>
+                        <label for="Estado">Estado</label>
+                        <select name="estados" id="estados">
+                            <option value="" selected>Selecione um Estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="cep">CEP:</label>
+                        <input type="text" pattern="[0-9]{5}-[0-9]{3}" id="cep" name="cep">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <h2>Perfil</h2>
+                <ul>
+                    <li>
+                        <label for="foto">Foto:</label>
+                        <input type="file" id="foto" name="foto" accept=".jpg, .gif, .png">
+                        <p>Tamanho máximo de 700k, JPG, GIF PNG.</p>
+                    </li>
+                    <li>
+                        <label for="nome-perfil">Nome:</label>
+                        <input type="text" id="nome-perfil" name="nome-perfil">
+                    </li>
+                    <li>
+                        <label for="site">Site</label>
+                        <input type="url" id="site" name="site">
+                        <p>Tem um site ou um blog? Coloque o endereço aqui.</p>
+                    </li>
+                    <li>
+                        <label for="biografia">Biografia:</label>
+                        <textarea name="biografia" id="biografia" cols="50" rows="10"></textarea>
+                    </li>
+                    <li>
+                        <span>Genero:</span>
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" id="masculino" name="masculino">
+                        <label for="feminino">Feminino</label>
+                        <input type="radio" id="feminino" name="feminino">
+                        <label for="outro">outro</label>
+                        <input type="radio" id="outro" name="outro">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <h2>E-mails</h2>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="email-checkbox" name="email-checkbox">
+                        <label for="email-checkbox">Tudo bem em enviar e-mails com mensagens de outros usuários.</label for="email-checkbox">
+                    </li>
+                    <li>
+                        <input type="checkbox" id="produtos-checkbox" name="produtos-checkbox">
+                        <label for="produtos-checkbox">Tudo bem em enviar e-mails ocasionais com promoções sobre outros produtos.</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <button type="submit">Criar conta</button>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
